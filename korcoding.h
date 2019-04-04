@@ -4,12 +4,12 @@
 
 #pragma once
 /*---C++ Header File---*/
-#include &lt;iostream>
-#include &lt;iomani>
+#include <iostream>
+#include <iomani>
 
 /*---C Header File---*/
-#include &lt;stdlib.h>
-#include &lt;time.h>
+#include <stdlib.h>
+#include <time.h>
 
 #define 진입점 main
 
@@ -43,7 +43,7 @@ typedef void 공백;
 class 기본입출력
 {
 public:
-	template &lt;typename type>
+	template <typename type>
 	기본입출력 출력(type a)
 	{
 		std::cout << a;
@@ -54,7 +54,7 @@ public:
 		std::cout << std::endl;
 		return *this;
 	}
-	template &lt;typename type>
+	template <typename type>
 	void 입력(type &a)
 	{
 		std::cin >> a;
@@ -126,7 +126,7 @@ public:
 		int x = rand();
 		return x;
 	}
-	template &lt;typename type>
+	template <typename type>
 	inline type 제곱(type a, int b)
 	{
 		type temp = 1;

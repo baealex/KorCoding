@@ -4,12 +4,12 @@
 
 #pragma once
 /*---C++ Header File---*/
-#include <iostream>
-#include <iomani>
+#include &lt;iostream>
+#include &lt;iomani>
 
 /*---C Header File---*/
-#include <stdlib.h>
-#include <time.h>
+#include &lt;stdlib.h>
+#include &lt;time.h>
 
 #define 진입점 main
 
@@ -43,7 +43,7 @@ typedef void 공백;
 class 기본입출력
 {
 public:
-	template <typename type>
+	template &lt;typename type>
 	기본입출력 출력(type a)
 	{
 		std::cout << a;
@@ -54,7 +54,7 @@ public:
 		std::cout << std::endl;
 		return *this;
 	}
-	template <typename type>
+	template &lt;typename type>
 	void 입력(type &a)
 	{
 		std::cin >> a;
@@ -67,7 +67,7 @@ private:
 	기본입출력 &ref;
 public:
 	출력옵션(기본입출력 &r) : ref(r) {};
-	기본입출력 진수변환(int x)
+	기본입출력 진수변환(int x = 10)
 	{
 		using namespace std;
 		switch (x)
@@ -84,7 +84,7 @@ public:
 		}
 		return ref;
 	}
-	inline 기본입출력 자릿수(int x)
+	inline 기본입출력 소수점(int x)
 	{
 		using namespace std;
 		cout.precision(x);
@@ -126,7 +126,7 @@ public:
 		int x = rand();
 		return x;
 	}
-	template <typename type>
+	template &lt;typename type>
 	inline type 제곱(type a, int b)
 	{
 		type temp = 1;
@@ -135,9 +135,25 @@ public:
 	}
 };
 
+template <typename T>
+int 길이(T *len = nullptr)
+{
+	int size = 0;
+	int count = 0;
+
+	while(1) {
+		size += sizeof(*(len + count));
+		count++;
+		if(*(len + count + 1) == NULL) {
+			break;
+		}
+	}
+	return size/sizeof(T) + 1;
+}
+
 기본입출력 입출력;
-출력옵션 옵션(입출력);
-편의시스템 콘솔;
+출력옵션 출력(입출력);
+편의시스템 시스템;
 수학기능 수학;
 
 #endif

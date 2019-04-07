@@ -5,7 +5,6 @@
 #pragma once
 /*---C++ Header File---*/
 #include <iostream>
-#include <iomani>
 
 /*---C Header File---*/
 #include <stdlib.h>
@@ -140,55 +139,42 @@ public:
 	}
 };
 
-template <typename T>
-int 길이(T *len = nullptr)
-{
-	int count = 0;
-	
-	while(1) {
-		if(*(len + count) == NULL) {
-			break;
-		}
-		count++;
-	} 
-	return count;
-}
-
+/*
 class 문자열클래스 {
+public:
 	char** 자르기(char* tmp, char ch)
 	{
 		int count = 0;
 		int ch_count = 0;
 		int length = 0;
 		int max_length = 0;
-		while(1) {
+		while (1) {
 			length++;
-			if(*(tmp + count) == ch) {
+			if (*(tmp + count) == ch) {
 				ch_count++;
-				if(max_length < length) {
+				if (max_length < length) {
 					max_length = length;
 					length = 0;
 				}
 			}
 			count++;
-			if(*(tmp + count) == NULL) {
+			if (*(tmp + count) == NULL) {
 				break;
 			}
 		}
 		ch_count++;
 		int index = 0;
 		char **return_array = (char**)malloc(sizeof(char) * ch_count);
-		for(int i=0; i<ch_count; i++) {
-			return_array[i] = (char*) malloc(sizeof(char) * max_length);
-			printf("%d\n",index);
-			for(int j=0; j<max_length; j++) {
+		for (int i = 0; i < ch_count; i++) {
+			return_array[i] = (char*)malloc(sizeof(char) * max_length);
+			for (int j = 0; j < max_length; j++) {
 				return_array[i][j] = *(tmp + index);
 				index++;
-				if(*(tmp + index) == ch) {
+				if (*(tmp + index) == ch) {
 					index++;
 					break;
 				}
-				else if(*(tmp + index) == NULL) {
+				else if (*(tmp + index) == NULL) {
 					break;
 				}
 			}
@@ -197,9 +183,24 @@ class 문자열클래스 {
 	}
 };
 
+template <typename T>
+int 길이(T *len = nullptr)
+{
+	int count = 0;
+
+	while (1) {
+		if (*(len + count) == NULL) {
+			break;
+		}
+		count++;
+	}
+	return count;
+}
+// */
+
 기본입출력 입출력;
 출력옵션 출력(입출력);
-문자열클래스 문자열;
+// 문자열클래스 문자열;
 시스템클래스 콘솔;
 수학클래스 수학;
 

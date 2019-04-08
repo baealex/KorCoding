@@ -1,8 +1,11 @@
+#pragma once
 /*----KOREAN CODING----*/
 #ifndef _KOREAN_H_
 #define _KOREAN_H_
 
+#pragma warning(disable:4244)
 #pragma once
+
 /*---C++ Header File---*/
 #include <iostream>
 
@@ -18,18 +21,18 @@
 #define 반복 for
 #define 반환 return
 
-#define 형식정의 typedef
-#define 구조체 struct
+#define 정의 typedef
+#define 구조 struct
 
 #define 클래스 class
 #define 공개 public
 #define 숨김 private
 #define 보호 protected
 
+#define 상수 const
+#define 정적 static
 #define 동적 new
 #define 삭제 delete
-#define 정적 static
-#define 상수 const
 
 #define 참 true
 #define 거짓 false

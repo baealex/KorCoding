@@ -21,6 +21,8 @@
 #define 증가 ++
 #define 감소 --
 
+#define 삼중포인터 ***
+#define 이중포인터 **
 #define 포인터 *
 #define 참조 &
 
@@ -221,9 +223,15 @@ public:
 				index++;
 				if (*(tmp + index) == ch) {
 					index++;
+					for (int k = j + 1; k < max_length; k++) {
+						return_array[i][k] = 0;
+					}
 					break;
 				}
 				else if (*(tmp + index) == NULL) {
+					for (int k = j + 1; k < max_length; k++) {
+						return_array[i][k] = 0;
+					}
 					break;
 				}
 			}
@@ -244,7 +252,6 @@ int 길이(T *len = nullptr)
 	}
 	return count;
 }
-// */
 
 JinIO 입출력;
 JinPrint 출력(입출력);

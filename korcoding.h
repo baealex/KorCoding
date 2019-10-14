@@ -56,15 +56,40 @@
 #define 진실 true
 #define 거짓 false
 
-typedef int 정수형을반환하는;
-typedef float 실수형을반환하는;
-typedef char 문자형을반환하는;
+typedef int 정수형을_반환하는;
+typedef float 실수형을_반환하는;
+typedef char 문자형을_반환하는;
 
-typedef int 정수를반환하는;
-typedef float 실수를반환하는;
-typedef char 문자를반환하는;
+typedef int 정수를_반환하는;
+typedef float 실수를_반환하는;
+typedef char 문자를_반환하는;
 typedef void 반환하지않는;
 typedef void 반환없음;
+
+typedef int 정수변수인;
+typedef float 실수변수인;
+typedef char 문자변수인;
+
+typedef int 정수형인;
+typedef float 실수형인;
+typedef char 문자형인;
+typedef void 비어있는;
+typedef void 비어있음;
+
+typedef int 정수인;
+typedef float 실수인;
+typedef char 문자인;
+
+typedef int 정수변수;
+typedef float 실수변수;
+typedef char 문자변수;
+
+typedef int 정수;
+typedef float 실수;
+typedef char 문자;
+typedef void 공백;
+
+typedef bool 진실혹은거짓;
 
 typedef int 정수변수인;
 typedef float 실수변수인;

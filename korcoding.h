@@ -59,6 +59,8 @@
 #define 나의 this
 #define 이것의 this
 
+#define 가상의 virtual
+#define 가상 virtual
 #define 객체 class
 #define 객체인 class
 #define 클래스 class
@@ -87,8 +89,8 @@ typedef char 문자형을_반환하는;
 typedef int 정수를_반환하는;
 typedef double 실수를_반환하는;
 typedef char 문자를_반환하는;
-typedef void 반환하지않는;
-typedef void 반환되지않는;
+typedef void 반환하지_않는;
+typedef void 반환되지_않는;
 typedef void 반환없음;
 
 typedef int 정수변수인;
@@ -223,6 +225,25 @@ public:
 
 class JinString {
 public:
+	char* 형변환(int x)
+	{
+		int number_len = 1;
+		int number_len_len = 1;
+		while (true) {
+			if (x / number_len > 0)
+			{
+				number_len *= 10;
+				number_len_len += 1;
+			}
+			else
+			{
+				break;
+			}
+		}
+		char* result = new char(number_len_len);
+		itoa(x, result, 10);
+		return result;
+	}
 	char** 자르기(char* tmp, char ch)
 	{
 		int count = 0;

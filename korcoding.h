@@ -26,15 +26,35 @@
 #define 포인터 *
 #define 참조 &
 
+#define 더하기 +
+#define 빼기 -
+#define 곱하기 *
+#define 나머지 %
+#define 나누기 /
+
 #define 만약 if
 #define 만약에 if
 #define 혹은 else if
 #define 아니면 else
+
+#define 실행 do
+#define 동안 while
 #define 반복 for
+#define 멈춤 break
+#define 이어서 continue
+#define 건너뜀 continue
+#define 구분 switch
+#define 경우 case
+
 #define 반환 return
 
+#define 속에 ::
+#define 안에 ::
 #define 정의 typedef
 #define 구조 struct
+#define 공간 namespace
+#define 사용할 using
+#define 사용 using
 
 #define 나의 this
 #define 이것의 this
@@ -56,61 +76,41 @@
 #define 진실 true
 #define 거짓 false
 
+#define 크기 sizeof
+#define 내부 inline
+#define 내부의 inline
+
 typedef int 정수형을_반환하는;
-typedef float 실수형을_반환하는;
+typedef double 실수형을_반환하는;
 typedef char 문자형을_반환하는;
 
 typedef int 정수를_반환하는;
-typedef float 실수를_반환하는;
+typedef double 실수를_반환하는;
 typedef char 문자를_반환하는;
 typedef void 반환하지않는;
+typedef void 반환되지않는;
 typedef void 반환없음;
 
 typedef int 정수변수인;
-typedef float 실수변수인;
+typedef double 실수변수인;
 typedef char 문자변수인;
 
 typedef int 정수형인;
-typedef float 실수형인;
+typedef double 실수형인;
 typedef char 문자형인;
 typedef void 비어있는;
 typedef void 비어있음;
 
 typedef int 정수인;
-typedef float 실수인;
+typedef double 실수인;
 typedef char 문자인;
 
 typedef int 정수변수;
-typedef float 실수변수;
+typedef double 실수변수;
 typedef char 문자변수;
 
 typedef int 정수;
-typedef float 실수;
-typedef char 문자;
-typedef void 공백;
-
-typedef bool 진실혹은거짓;
-
-typedef int 정수변수인;
-typedef float 실수변수인;
-typedef char 문자변수인;
-
-typedef int 정수형인;
-typedef float 실수형인;
-typedef char 문자형인;
-typedef void 비어있는;
-typedef void 비어있음;
-
-typedef int 정수인;
-typedef float 실수인;
-typedef char 문자인;
-
-typedef int 정수변수;
-typedef float 실수변수;
-typedef char 문자변수;
-
-typedef int 정수;
-typedef float 실수;
+typedef double 실수;
 typedef char 문자;
 typedef void 공백;
 
@@ -126,6 +126,11 @@ public:
 		return *this;
 	}
 	JinIO 새행()
+	{
+		std::cout << std::endl;
+		return *this;
+	}
+	JinIO 개행()
 	{
 		std::cout << std::endl;
 		return *this;

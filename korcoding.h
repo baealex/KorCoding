@@ -49,6 +49,7 @@
 
 #define 반환 return
 
+#define 에서 ->
 #define 속에 ::
 #define 안에 ::
 #define 정의 typedef

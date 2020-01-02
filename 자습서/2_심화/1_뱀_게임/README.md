@@ -4,5 +4,5 @@
 - [snake.h](snake.h) : 뱀, 상자, 위치 클래스가 선언된 헤더
 - [snake.cpp](snake.cpp) : 뱀, 상자, 위치 클래스가 구현된 코드
 - [snake_game.h](snake_game.h) : 뱀_게임 클래스가 선언된 헤더
-- [snake_game.cpp](main.cpp) : 뱀_게임 클래스가 구현된 코드
+- [snake_game.cpp](snake_game.cpp) : 뱀_게임 클래스가 구현된 코드
 - [main.cpp](main.cpp) : 뱀_게임 클래스를 호출하는 진입점이 포함된 코드
